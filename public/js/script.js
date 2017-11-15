@@ -12,3 +12,12 @@ var $gridArtwork = $('.grid-artwork').masonry({
     gutter: '.gutter-sizer',
     percentPosition: true
 });
+
+$('.artwork-artist-container').scroll($.debounce( 250, true, function(){
+    $(this).addClass('overflow-scrollbar');
+    $(this).removeClass('overflow-scrollbar-hidden');
+} ) );
+$('.artwork-artist-container').scroll($.debounce( 1000, function(){
+    $(this).removeClass('overflow-scrollbar');
+    $(this).addClass('overflow-scrollbar-hidden');
+} ) );

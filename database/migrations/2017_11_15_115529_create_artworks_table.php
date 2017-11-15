@@ -18,7 +18,8 @@ class CreateArtworksTable extends Migration
             $table->string('title', 45);
             $table->text('description')->nullable();
             $table->string('path_image', 255);
-            $table->integer('artist_id')->unsigned();
+            $table->unsignedInteger('artist_id');
+            $table->unsignedDecimal('amount', 8, 2);
             $table->foreign('artist_id')
                 ->references('id')->on('artists')
                 ->onDelete('cascade');

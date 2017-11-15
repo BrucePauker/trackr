@@ -10,14 +10,6 @@
                     </div>
                 @endforeach
             </div>
-            <a class="carousel-control-prev" href="#carouselArtwork" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselArtwork" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
         <div class="row justify-content-center">
             <div class="col-5">
@@ -43,7 +35,7 @@
         <div class="row">
             <h2 class="section-title">Art Work</h2>
             <div class="container">
-                <div class="grid-artwork">
+                <div class="grid-artwork artwork-artist-container overflow-scrollbar">
                     <div class="grid-sizer"></div>
                     <div class="gutter-sizer"></div>
                     @foreach($artist->artworks->sortByDesc('created_at') as $artwork)
@@ -60,5 +52,5 @@
             </div>
         </div>
     </div>
-    @include('users.artists.addArtWork')
+    @include('users.artists.artworks.addArtWork')
 @endsection
