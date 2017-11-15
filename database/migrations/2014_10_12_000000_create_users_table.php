@@ -23,7 +23,6 @@ class CreateUsersTable extends Migration
             $table->string('zipcode', 5);
             $table->string('city', 45);
             $table->string('country', 45);
-            $table->string('avatar')->default('NULL');
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
