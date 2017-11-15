@@ -12,7 +12,3 @@ var $gridArtwork = $('.grid-artwork').masonry({
     gutter: '.gutter-sizer',
     percentPosition: true
 });
-
-$gridArtwork.imagesLoaded().progress( function() {
-    $gridArtwork.masonry('layout');
-});

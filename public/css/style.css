@@ -51,3 +51,11 @@
 .artwork-image {
     cursor: pointer;
 }
+
+.carousel-inner {
+    background-color: black;
+}
+
+.image-carousel-profil {
+    height: 40vh;
+}
