@@ -26,6 +26,15 @@
         <div class="row">
             <h2 class="section-title">Art Work</h2>
             <div class="container">
+                <div class="grid-artwork">
+                    <div class="grid-sizer"></div>
+                    <div class="gutter-sizer"></div>
+                    @foreach($artist->artworks->sortByDesc('created_at') as $artwork)
+                        <div class="grid-item">
+                            <img src="{{ asset('storage/'.$artwork->path_image) }}" class="img-fluid artwork-image" alt="{{ $artwork->title  }}">
+                        </div>
+                    @endforeach
+                </div>
                 @if(Auth::user()->artist === $artist)
                     <div class="row justify-content-end">
                         <i class="material-icons md-36" onclick="showAddArtWorkModal()">add</i>
