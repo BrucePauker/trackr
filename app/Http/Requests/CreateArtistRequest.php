@@ -25,7 +25,7 @@ class CreateArtistRequest extends FormRequest
     {
         return [
             'name_artist' => 'unique:artists|string|nullable|max:45',
-            'biography' => ''
+            'biography' => 'required|string|max:10000',
         ];
     }
 }

@@ -18,9 +18,11 @@
                         <a class="nav-link" href="{{ route('account_index') }}">
                             Buyer Profil
                         </a>
-                        <a class="nav-link" href="{{ route('artist_view') }}">
-                            Artist Profil
-                        </a>
+                        @if(Auth::user()->artist)
+                            <a class="nav-link" href="{{ route('artist_view') }}">
+                                Artist Profil
+                            </a>
+                        @endif
                         <a class="nav-link" href="{{ route('account_index') }}">
                             My Account
                         </a>
