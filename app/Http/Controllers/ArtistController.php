@@ -48,6 +48,9 @@ class ArtistController extends Controller
      */
     public function add(CreateArtistRequest $createArtistRequest)
     {
+        if(Auth::user()->artist)
+            return redirect()->back();
+
         Artist::create([
             'name_artist' => $createArtistRequest->input('name_artist'),
             'biography' => $createArtistRequest->input('biography'),

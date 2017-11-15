@@ -24,4 +24,14 @@ class Artist extends Model
     public function user() {
         return $this->belongsTo('\App\Models\User');
     }
+
+    /**
+     * Return all the art work of a user
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function artworks()
+    {
+        return $this->hasMany('\App\Models\Artwork');
+    }
 }

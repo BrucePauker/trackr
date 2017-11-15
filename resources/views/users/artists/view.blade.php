@@ -26,9 +26,11 @@
         <div class="row">
             <h2 class="section-title">Art Work</h2>
             <div class="container">
-                <div class="row justify-content-end">
-                    <i class="material-icons md-36" data-toggle="modal" data-target="#addArtWorkModal">add</i>
-                </div>
+                @if(Auth::user()->artist === $artist)
+                    <div class="row justify-content-end">
+                        <i class="material-icons md-36" onclick="showAddArtWorkModal()">add</i>
+                    </div>
+                @endif
             </div>
         </div>
     </div>

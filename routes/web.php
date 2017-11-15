@@ -27,3 +27,8 @@ Route::prefix('artist')->group(function() {
     Route::get('/view', 'ArtistController@view')->name('artist_view');
     Route::post('/add', 'ArtistController@add')->name('artist_add');
 });
+
+Route::prefix('artwork')->group(function() {
+    Route::get('/view', 'ArtworkController@view')->name('artwork_view');
+    Route::post('/add', 'ArtworkController@add')->name('artwork_add');
+});
